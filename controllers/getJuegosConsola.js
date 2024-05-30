@@ -1,7 +1,7 @@
 const juegos = require("../juegos.js")
 const { request, response} = require("express")
 
-const getJuegosConsola = (req = require, res = response)=>{
+const getJuegosConsola = (req = request, res = response)=>{
     let consola = req.params.consola;
 
     let juegosConsola = juegos.filter( juego => juego.consola === consola);
@@ -19,7 +19,6 @@ const getJuegosConsola = (req = require, res = response)=>{
             msg:"No hay juegos para esa consola"
         })
     }
-    
 }
 
 module.exports = {

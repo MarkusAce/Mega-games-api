@@ -1,7 +1,7 @@
 const juegos = require("../juegos.js")
 const { request, response} = require("express")
 
-const getJuegos = (req = require, res = response)=>{
+const getJuegos = (req = request, res = response)=>{
 
     return res.json({
         ok:true,
